@@ -4,14 +4,12 @@ import { Component } from '@angular/core';
   selector: 'binding',
   template: `
     <p>Please work.</p>
-    <table>
-      <tr>
-        <td [attr.colspan]="colSpan"></td>
-      </tr>
-    </table>
+    <button class="btn btn-primary" [class.active]="isActive">Boostrap Button!</button>
+    <button [style.backgroundColor]>Style Binding!</button>
   `
 })
-export class BindingExampleComponent {
 
+export class BindingExampleComponent {
+  isActive = false;
   colSpan = 2;
 }
