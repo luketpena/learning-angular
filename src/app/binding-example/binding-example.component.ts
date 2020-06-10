@@ -5,11 +5,11 @@ import { Component } from '@angular/core';
   template: `
     <p>Please work.</p>
     <button class="btn btn-primary" [class.active]="isActive">Boostrap Button!</button>
-    <button [style.backgroundColor]>Style Binding!</button>
+    <button [style.backgroundColor]="isActive? 'blue' : 'white'">Style Binding!</button>
   `
 })
 
 export class BindingExampleComponent {
-  isActive = false;
+  isActive = true;
   colSpan = 2;
 }
